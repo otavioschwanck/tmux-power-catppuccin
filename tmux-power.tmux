@@ -34,8 +34,11 @@ prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 time_format=$(tmux_get @tmux_power_time_format '%T')
 date_format=$(tmux_get @tmux_power_date_format '%F')
 # short for Theme-Colour
-TC=$(tmux_get '@tmux_power_theme' 'gold')
+TC=$(tmux_get '@tmux_power_theme' 'catppuccin')
 case $TC in
+    'catppuccin' )
+        TC='#c6a0f6'
+        ;;
     'gold' )
         TC='#ffb86c'
         ;;
@@ -65,21 +68,21 @@ case $TC in
         ;;
 esac
 
-G01=#080808 #232
-G02=#121212 #233
-G03=#1c1c1c #234
-G04=#262626 #235
-G05=#303030 #236
-G06=#3a3a3a #237
-G07=#444444 #238
-G08=#4e4e4e #239
-G09=#585858 #240
-G10=#626262 #241
-G11=#6c6c6c #242
-G12=#767676 #243
+G01=#181926 #232
+G02=#1e2030 #233
+G03=#24273a #234
+G04=#494d64 #235
+G05=#5b6078 #236
+G06=#6e738d #237
+G07=#6e738d #238
+G08=#8087a2 #239
+G09=#939ab7 #240
+G10=#a5adcb #241
+G11=#b8c0e0 #242
+G12=#cad3f5 #243
 
 FG="$G10"
-BG="$G04"
+BG="$G03"
 
 # Status options
 tmux_set status-interval 1
